@@ -1,11 +1,42 @@
-from odoo import fields, models
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_custom_hello_tree" model="ir.ui.view">
+        <field name="name">custom.hello.tree</field>
+        <field name="model">custom.hello</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="active"/>
+            </tree>
+        </field>
+    </record>
 
+    <record id="view_custom_hello_form" model="ir.ui.view">
+        <field name="name">custom.hello.form</field>
+        <field name="model">custom.hello</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="active"/>
+                        <field name="note"/>
+                    </group>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
 
-class CustomHello(models.Model):
-    _name = "custom.hello"
-    _description = "Custom Hello"
-    _inherit = ["mail.thread", "mail.activity.mixin"]
+    <record id="action_custom_hello" model="ir.actions.act_window">
+        <field name="name">Hello Records</field>
+        <field name="res_model">custom.hello</field>
+        <field name="view_mode">tree,form</field>
+    </record>
 
-    name = fields.Char(required=True, tracking=True)
-    note = fields.Text()
-    active = fields.Boolean(default=True)
+    <menuitem id="menu_custom_hello_root" name="Custom Hello"/>
+    <menuitem id="menu_custom_hello_records"
+              name="Records"
+              parent="menu_custom_hello_root"
+              action="action_custom_hello"/>
+</odoo>
