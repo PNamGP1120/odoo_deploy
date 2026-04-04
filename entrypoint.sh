@@ -8,6 +8,7 @@ db_host = ${DB_HOST}
 db_port = ${DB_PORT:-5432}
 db_user = ${DB_USER}
 db_password = ${DB_PASSWORD}
+db_name = False
 addons_path = /mnt/extra-addons,/usr/lib/python3/dist-packages/odoo/addons
 data_dir = /var/lib/odoo
 proxy_mode = True
