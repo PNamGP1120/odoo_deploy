@@ -24,11 +24,11 @@ services:
           property: password
       - key: ODOO_ADMIN_PASSWD
         value: admin123456
+      - key: ODOO_DB_NAME
+        value: odoo
 
 databases:
   - name: odoo-db
     plan: free
     databaseName: odoo
-    user: odoo    
-  - key: ODOO_DB_NAME
-    value: odoo
+    user: odoo
