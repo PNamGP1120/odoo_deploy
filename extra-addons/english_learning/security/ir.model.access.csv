@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_english_vocabulary,english.vocabulary,model_english_vocabulary,base.group_user,1,1,1,1
+access_english_lesson,english.lesson,model_english_lesson,base.group_user,1,1,1,1
+access_english_quiz,english.quiz,model_english_quiz,base.group_user,1,1,1,1
+access_english_user_progress,english.user_progress,model_english_user_progress,base.group_user,1,1,1,1

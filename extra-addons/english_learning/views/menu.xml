@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="menu_english_learning_root" name="English Learning"/>
+    <menuitem id="menu_vocabulary" name="Vocabulary" parent="menu_english_learning_root" action="action_vocabulary"/>
+    <menuitem id="menu_lessons" name="Lessons" parent="menu_english_learning_root" action="action_lesson"/>
+    <menuitem id="menu_quizzes" name="Quizzes" parent="menu_english_learning_root" action="action_quiz"/>
+    <menuitem id="menu_user_progress" name="User Progress" parent="menu_english_learning_root" action="action_user_progress"/>
+</odoo>

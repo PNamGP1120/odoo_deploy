@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_quiz_tree" model="ir.ui.view">
+        <field name="name">english.quiz.tree</field>
+        <field name="model">english.quiz</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="lesson_id"/>
+                <field name="question"/>
+                <field name="active"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_quiz_form" model="ir.ui.view">
+        <field name="name">english.quiz.form</field>
+        <field name="model">english.quiz</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="lesson_id"/>
+                        <field name="question"/>
+                        <field name="options"/>
+                        <field name="correct_answer"/>
+                        <field name="active"/>
+                    </group>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_quiz" model="ir.actions.act_window">
+        <field name="name">Quizzes</field>
+        <field name="res_model">english.quiz</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>

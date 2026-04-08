@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_user_progress_tree" model="ir.ui.view">
+        <field name="name">english.user_progress.tree</field>
+        <field name="model">english.user_progress</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="user_id"/>
+                <field name="lesson_id"/>
+                <field name="vocabulary_id"/>
+                <field name="quiz_id"/>
+                <field name="score"/>
+                <field name="completed"/>
+                <field name="date_completed"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_user_progress_form" model="ir.ui.view">
+        <field name="name">english.user_progress.form</field>
+        <field name="model">english.user_progress</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="user_id"/>
+                        <field name="lesson_id"/>
+                        <field name="vocabulary_id"/>
+                        <field name="quiz_id"/>
+                        <field name="score"/>
+                        <field name="completed"/>
+                        <field name="date_completed"/>
+                    </group>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_user_progress" model="ir.actions.act_window">
+        <field name="name">User Progress</field>
+        <field name="res_model">english.user_progress</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>
