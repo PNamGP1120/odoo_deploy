@@ -29,4 +29,6 @@ databases:
   - name: odoo-db
     plan: free
     databaseName: odoo
-    user: odoo
+    user: odoo    
+  - key: ODOO_DB_NAME
+    value: odoo
